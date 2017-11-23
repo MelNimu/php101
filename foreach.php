@@ -115,6 +115,38 @@
 	<h3>Assignment</h3>
 	<p>Create an indexed array with tyhe following values : 
 		tokyo , mexico city , new york city , mumbai , seoul , shanghai ,  lagos ,  buenos aires , cairo , london <br> Using a foreach loop , print the values separated by a comma. <br> Sort the array, then print the values to the browser. <br> add the following corresponding countries  to the array in an associative array and print it out using country as key and city as value <br> <em>using foreach loop $city is in $country</em>	</p>
+
+		<br>
+		<?php 
+			$cities = array("Tokyo", "Mexico City" , "Newyork City" , "Mumbai" , "Seoul" , "Shanghai" , "Lagos" , "Buenos Aires" , "Cairo" , "London");
+			foreach ($cities as $key) {
+				echo $key . " , ";
+			}
+			/* or
+			echo "$key ,";
+
+			*/
+
+			echo "<br>";
+			echo "Sorted" . sort($cities);
+			echo "<pre>";
+			print_r($cities);
+			echo "</pre>";
+
+			echo "<br>";
+			// print array in a bulleted list
+			echo "\n <ul> \n";
+			foreach ($cities as $key) {
+				echo "<li> $key </li> \n";
+			}
+			echo "</ul>";
+
+			echo "<br>";
+			$cCountries = ["Japan" => "Tokyo" , "Mexico" => "Mexico City" , "USA" => "Newyork City" , "India" => "Mumbai" , "South Korea" => "Seoul" , "China" => "Shanghai" , "Nigeria" => "Lagos" , "Argentina" => "Buenos Aires" , "Egypt" => "Cairo" , "The UK" => "London"];
+			foreach ($cCountries as $key => $value) {
+				echo $value . " is in " . $key . "<br>";
+			}
+		 ?>
 	
 
 
